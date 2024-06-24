@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>Gcam</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mediaquery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css">
+</head>
+
+<body id="top">
+    <nav class="desktop-nav">
+        <a class="logo" href="index.html">
+            <div class="logo"><img src="assets/img/name.png" alt="Android Brasil"></div>
+        </a>
+        <ul class="desktop-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <nav class="mobile-nav">
+        <a class="logo" href="index.html">
+            <div class="logo"><img src="assets/img/name.png" alt="Android Brasil"></div>
+        </a>
+        <div class="mobile-menu">
+            <div class="mobile-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <menu class="mobile-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contato</a></li>
+            </menu>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="divider">
+            <h2 class="margin">O que é Gcam?</h2>
+
+            <p><span>GCam (Google Camera):</span> Um aplicativo de câmera desenvolvido pelo Google para
+                dispositivos Android. Ele é conhecido por suas capacidades avançadas de processamento de imagem,
+                incluindo o modo noturno, HDR+ e a tecnologia de fotografia computacional que melhora a qualidade das
+                fotos tiradas com smartphones.</p>
+
+            <p>Além disso, alguns desenvolvedores independentes criam mods (modificações) do GCam para
+                torná-lo compatível com uma variedade maior de smartphones que não são fabricados pelo Google. Esses
+                mods permitem aos usuários fazer inúmeros ajustes e personalizações como nitidez, redução de ruído,
+                ajustes de cores, sombras e muito mais, proporcionando uma experiência fotográfica melhorada em
+                dispositivos que, de outra forma, não teriam acesso às funcionalidades avançadas do aplicativo original.
+            </p>
+
+            <p><span>As mais usadas atualmente são:</span> LMC (by Hasli), AGC (by BigKaka) e MGC (by BSG).
+            </p>
+
+            <a href="https://www.celsoazevedo.com/files/android/google-camera" target="_blank" rel="external">
+                <button>
+                    <i class="fa-solid fa-link gcam"></i> Baixe Aqui
+                </button>
+            </a>
+        </section>
+
+        <h2>Guia Libpatcher</h2>
+
+        <section>
+            <h3>Main Settings - Configurações Principais</h3>
+
+            <p>
+                <span class="bold">Sharpness A -</span> Adiciona nitidez ao processamento de imagem.<br>
+                - Valores mais altos: Alta nitidez, mas também mais ruído.<br>
+                - Valores mais baixos: Menos nitidez, mas menos ruído.
+            </p>
+
+            <p>
+                <span class="bold">Sharpness B -</span> Nitidez Fina (mais profundidade com alta intensidade de
+                nitidez).<br>
+                - Valores mais altos: Nitidez refinada, mas também mais ruído.<br>
+                - Valores mais baixos: Menos nitidez, mas menos ruído.
+            </p>
+
+            <p>
+                <span class="bold">Chroma A -</span> Chroma é ruído de cor.<br>
+                Reduções muito altas podem causar borrões, confundindo linhas de profundidade dos elementos com
+                sombras.<br>
+                - Quanto maior os valores, maior a redução de ruído chroma.
+            </p>
+
+            <p>
+                <span class="bold">Chroma B -</span> Chroma "fino", gerenciando o chroma (ruído de cor) em detalhes mais
+                finos.
+            </p>
+
+            <p>
+                <span class="bold">Denoise -</span> Reduz o ruído, suaviza imperfeições e diminui a granulação.<br>
+                - Valores mais altos resultam em uma aparência mais embaçada.
+            </p>
+
+            <p>
+                <span class="bold">Spatial A -</span> Redução de ruído espacial.<br>
+                Quanto menor o valor, maior a redução de ruído.<br>
+                - Valores muito baixos podem arruinar a estrutura da foto e adicionar um efeito de desfoque aos objetos
+                de fundo.<br>
+                - Valores negativos mais altos capturam menos detalhes.
+            </p>
+
+            <p>
+                <span class="bold">Spatial B -</span> Detalhes finos. Similar ao Spatial A, mas também adiciona um
+                desfoque radial ao redor do sujeito.
+            </p>
+
+            <p>
+                <span class="bold">Luma A -</span> Gerencia o nível de ruído de luminosidade.
+            </p>
+
+            <p>
+                <span class="bold">Luma B -</span> Ajuda a gerenciar ruído luminoso (mais fino).<br>
+                - Valores muito altos deixam a imagem muito suave.<br>
+                - Valores muito altos deixam a imagem muito suave.
+            </p>
+
+            <p>
+                <span class="bold">Luma Denoise New A -</span> Redução de ruído de luminância mais agressiva, removendo
+                a granulação nas imagens.<br>
+                Pode resultar em perda de detalhes e nitidez em algumas situações.<br>
+                Mais eficaz em ambientes com pouca luz. Para fotos com muita luz e ruído.<br>
+                - Valores mais altos podem deixar a imagem mais embaçada e reduzir os detalhes.<br>
+                - Valores baixos mantêm mais detalhes, mas não são tão eficazes na redução de ruído.
+            </p>
+
+            <p>
+                <span class="bold">Luma Denoise New B -</span> Redução de ruído de luminância mais suave. Remove a
+                granulação nas imagens.<br>
+                Preserva mais detalhes e nitidez. Menos eficaz em ambientes com pouca luz.<br>
+                - Valores mais altos podem deixar a imagem mais embaçada e reduzir os detalhes.<br>
+                - Valores baixos mantêm mais detalhes, mas não são tão eficazes na redução de ruído.
+            </p>
+
+            <p>
+                <span class="bold">Temporal A -</span> Controla a redução de ruído temporal, uma técnica que analisa
+                vários quadros de imagem consecutivos e aplica técnicas de redução de ruído para criar uma imagem final
+                com ruído reduzido e qualidade geral aprimorada.<br>
+                Para fotografia de close-up, fotos casuais, selfies, fotos em movimento.<br>
+                Analisa menos quadros para a redução de ruído, resultando em fotos com menos detalhes e mais borradas em
+                ambientes com pouca luz. Mais rápida e eficiente, ideal para fotos casuais ou quando a velocidade é
+                importante.<br>
+                - Valores mais altos resultam em mais embaçamento e menos ruído.
+            </p>
+
+            <p>
+                <span class="bold">Temporal B -</span> Ideal para fotos de paisagem e de grande distância, fotos
+                noturnas, fotos com detalhes importantes.<br>
+                Mais lenta e consome mais bateria, ideal para fotos em que a qualidade é crucial.<br>
+                A câmera captura rapidamente vários quadros e usa algoritmos para analisar e reduzir o ruído, comparando
+                e alinhando esses quadros.<br>
+                Isso ajuda a obter imagens mais limpas e nítidas, especialmente em condições de pouca luz.<br>
+                - Valores mais altos resultam em mais embaçamento e menos ruído.
+            </p>
+
+            <p>
+                <span class="bold">Lumanoise -</span> Ajuda a melhorar a qualidade das fotos tiradas em condições de
+                pouca luz ou à noite, reduzindo a granulação, que pode ser causada por configurações ISO altas ou
+                condições de iluminação ruins. Valores mais baixos causam esverdeamento nas bordas da foto,
+                especialmente em áreas escuras.
+            </p>
+
+            <p>
+                <span class="bold">Lut Noise Fix -</span> Reduz ruído e artefatos usando o método padrão baseado em LUT.
+            </p>
+
+            <p>
+                <span class="bold">Saturation -</span> Ajusta a saturação geral da imagem, afetando todas as cores
+                igualmente.<br>
+                - Aumentando a saturação, torna as cores mais brilhantes e saturadas.<br>
+                - Diminuindo a saturação, torna-as menos brilhantes.
+            </p>
+
+            <p>
+                <span class="bold">Saturation 2 -</span> Ajusta a saturação das cores primárias (vermelho, verde e
+                azul).<br>
+                - Recomenda-se experimentar as configurações de saturação e escolher valores que correspondam à sua
+                representação visual.
+            </p>
+
+            <p>
+                <span class="bold">Saturation 3</span> - Ajusta a saturação das cores secundárias (amarelo, laranja,
+                magenta, ciano, etc.).
+            </p>
+
+            <p>
+                <span class="bold">ISO -</span> Controla a sensibilidade da lente à luz que atinge o sensor durante o
+                disparo. Quanto maior o valor ISO, mais sensível a lente se torna à luz e mais brilhante pode ser a
+                imagem. No HDR Estendido, limita o ISO máximo. No ZSL, corrige a luz sem limitar o ISO.<br>
+                - Com um valor ISO baixo (por exemplo, ISO 100), a lente é menos sensível à luz, o que pode ser adequado
+                para fotografar sob luz solar intensa ou em ambientes bem iluminados. Também ajuda a reduzir o ruído na
+                imagem, mas pode não haver luz suficiente para iluminar a cena, o que pode causar áreas escuras e
+                subexpostas na foto.<br>
+                - Por outro lado, em valores ISO mais elevados (por exemplo, ISO 800, ISO 1600 e superiores), a lente
+                torna-se mais sensível à luz, o que permite obter imagens mais brilhantes em condições de pouca luz.
+                Contudo, pode haver mais ruído e perda de detalhes devido à amplificação do sinal do sensor.<br>
+                - É importante levar em consideração as condições de iluminação e o efeito desejado para escolher o
+                valor ISO ideal. Recomenda-se usar a configuração ISO com sabedoria para alcançar um equilíbrio entre
+                exposição e qualidade de imagem.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#top"><i class="fa-solid fa-angles-up"></i></a>
+
+        <p>Copyright © 2024 <a href="https://github.com/eduardobastier" target="_blank">Eduardo Bastier</a> All Rights
+            Reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+
+</html>
