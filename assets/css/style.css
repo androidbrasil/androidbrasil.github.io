@@ -15,6 +15,7 @@
 
 html {
     scroll-behavior: smooth;
+    padding: 2rem .6rem;
 }
 
 body {
@@ -30,12 +31,13 @@ body {
 
 .desktop-nav,
 .mobile-nav {
+    background: linear-gradient(to bottom right, var(--background-color), var(--background-color-2));
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    border-bottom: 1px solid #feffff1c;
+    border-bottom: 1px solid var(--secondary-color);
     z-index: 2;
 }
 
@@ -174,6 +176,12 @@ nav,
     border-bottom: 2px solid var(--primary-color);
 }
 
+main {
+    display: flex;
+    margin: auto;
+    max-width: 800px;
+}
+
 section {
     display: flex;
     flex-direction: column;
@@ -183,4 +191,52 @@ h1 {
     font-size: 1.4rem;
     color: var(--secondary-color);
     text-align: center;
+}
+
+p {
+    color: var(--primary-color);
+}
+
+/* GCam Pag */
+
+body.gcam {
+    margin-top: 6rem;
+}
+
+h1.gcam {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+p.gcam {
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+p.gcam span {
+    font-weight: 600;
+}
+
+p.gcam:last-of-type {
+    margin-top: 2rem;
+}
+
+button.gcam {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    border-radius: 10px;
+    border-style: none;
+    width: 120px;
+    height: 60px;
+    padding: 1%;
+    font-size: 90%;
+    font-family: 'Poppins', sans-serif;
+}
+
+button.gcam:hover {
+    background-color: #1ab5e4;
+}
+
+button.gcam i {
+    color: var(--background-color);
 }

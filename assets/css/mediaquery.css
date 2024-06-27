@@ -7,4 +7,10 @@
     .mobile-nav {
         display: flex;
     }
+
+    /* GCam Pag */
+
+    h1.gcam {
+        font-size: 2rem;
+    }
 }
