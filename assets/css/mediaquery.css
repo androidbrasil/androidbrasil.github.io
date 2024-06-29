@@ -8,9 +8,17 @@
         display: flex;
     }
 
+    main {
+        max-width: 90vw;
+    }
+
     /* GCam Pag */
 
-    h1.gcam {
+    h2.gcam {
         font-size: 2rem;
+    }
+
+    h3.gcam {
+        font-size: 1.2rem;
     }
 }
