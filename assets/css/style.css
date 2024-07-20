@@ -171,11 +171,35 @@ nav,
     max-width: 800px;
 }
 
+.profile {
+    display: flex;
+}
+
 .profile img {
     max-width: 270px;
     margin-bottom: 10px;
     z-index: 0;
     border-bottom: 2px solid var(--primary-color);
+}
+
+.contact {
+    display: flex;
+}
+
+.contact i {
+    color: var(--secondary-color);
+}
+
+.contact a {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 200ms ease;
+}
+
+.contact a:hover {
+    transform: translateY(-6px);
 }
 
 .divider {
