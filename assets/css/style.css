@@ -173,6 +173,9 @@ nav,
 
 .profile {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile img {
@@ -192,7 +195,8 @@ nav,
 
 .contact a {
     margin: 2rem 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    letter-spacing: .1rem;
     color: var(--primary-color);
     text-decoration: none;
     transition: all 200ms ease;
@@ -214,8 +218,10 @@ section.profile {
 }
 
 h1 {
-    font-size: 1.4rem;
-    color: var(--secondary-color);
+    font-size: 1.2em;
+    letter-spacing: .2rem;
+    font-weight: 500;
+    color: var(--primary-color);
     text-align: center;
     margin-top: 1rem;
 }
@@ -240,6 +246,7 @@ h3 {
 p {
     color: var(--primary-color);
     margin-bottom: 1rem;
+    font-weight: 300;
 }
 
 p span {
