@@ -28,11 +28,11 @@
         padding: 0;
     }
 
-    .contact {
+    .contact-tg {
         justify-content: center;
     }
 
-    .contact a {
+    .contact-tg a {
         font-size: 1rem;
     }
 
@@ -46,5 +46,14 @@
 
     h3 {
         font-size: 1.2rem;
+    }
+
+    .contact button {
+        width: 25vw;        
+    }
+
+    .contact a {
+        font-size: .8rem;
+        padding: .1rem;
     }
 }
