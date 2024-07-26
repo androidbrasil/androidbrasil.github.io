@@ -287,11 +287,10 @@ button i {
 .adm {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     margin-bottom: 2rem;
 }
 
-.adm div {
+.adm a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -299,12 +298,23 @@ button i {
     width: 50%;
     padding: 1rem 0;
     border: solid 1px var(--secondary-color);
-    background-color: #002A37;
+    background-color: var(--background-color-2);
+    text-decoration: none;   
+}
+
+.adm a:hover {
+    background-color: #002a3788;
+}
+
+.adm div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 50%;
 }
 
 .adm img {
     border-radius: 100px;
-    width: 40%;
     max-width: 80px;
     padding: .5rem;
 }
@@ -326,6 +336,7 @@ button i {
 
 .contact a {
     padding: .5rem;
+    text-decoration: none;
 }
 
 footer {
