@@ -1,5 +1,11 @@
 /* Smarthpone */
 @media screen and (max-width: 767px) {
+    .contact-tg a:hover,
+    button:hover,
+    footer a i:hover {
+        transform: none;
+    }
+
     .desktop-nav {
         display: none;
     }
